@@ -1,0 +1,29 @@
+@font-face {
+    font-family: "CormorantInfant";
+    src: local("CormorantInfant-Regular"),
+        url("./CormorantInfant-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CormorantInfantBold";
+    src: local("CormorantInfant-Bold"),
+        url("./CormorantInfant-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CormorantInfantItalic";
+    src: local("CormorantInfant-Italic"),
+        url("./CormorantInfant-Italic.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CormorantInfantMedium";
+    src: local("CormorantInfant-Medium"),
+        url("./CormorantInfant-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "CormorantInfantLight";
+    src: local("CormorantInfant-Light"),
+        url("./CormorantInfant-Light.ttf") format("truetype");
+}
