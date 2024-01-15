@@ -1,0 +1,77 @@
+@import "../../variables";
+
+.container {
+  display: flex;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid rgba(224, 224, 224, 1);
+    padding: 15px;
+    cursor: pointer;
+    min-width: 400px;
+
+    &.selected {
+      background-color: $gray-bg-color;
+    }
+
+    &:hover {
+      background-color: $gray-bg-color;
+    }
+
+    .image {
+      width: 150px;
+
+      img, span {
+        max-width: 100%;
+      }
+    }
+
+    .details {
+      display: flex;
+      flex-direction: column;
+      margin-left: 20px;
+
+      .name {
+        font-weight: 600;
+        text-align: left;
+      }
+
+      div {
+        max-width: 200px;
+        text-align: left;
+      }
+
+      .titleArticle {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+        text-align: left;
+      }
+    }
+  }
+
+  .subContainer {
+    border: 1px solid rgba(224, 224, 224, 1);
+    width: 100%;
+    padding: 15px;
+
+    .noArticle {
+      font-size: 24px;
+      color: rgb(167, 164, 164);
+      text-align: left;
+    }
+
+    .articleContainer {
+      text-align: left;
+      .image {
+        width: 300px;
+      }
+
+      .descr {
+        font-weight: 600;
+      }
+    }
+  }
+}
