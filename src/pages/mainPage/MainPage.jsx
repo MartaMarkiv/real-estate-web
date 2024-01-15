@@ -5,7 +5,6 @@ import "./styles.scss";
 import ListComponent from "../../components/list/ListComponent";
 
 function Main() {
-  const [error, setError] = useState(false);
   const [dataTable, setDataTable] = useState([]);
 
   const fetchData = useCallback(async () => {
@@ -20,9 +19,7 @@ function Main() {
         setDataTable(data);
       })
       // eslint-disable-next-line no-unused-vars
-      .catch(err => {
-        setError(true);
-      });
+      .catch(err => {});
   }, []);
 
   useEffect(() => {
@@ -31,15 +28,7 @@ function Main() {
   }, [fetchData]);
 
   return(<section className="content">
-    { error ?
-      <div className="title">Error happened</div>:
-      <div>
-        <div className="title tableOperationWrapper">
-          <span>Formula top headlines</span>
-        </div>
-        <ListComponent data={dataTable} />
-      </div>
-    }
+      <ListComponent data={dataTable} />
     </section>
   );
 }
