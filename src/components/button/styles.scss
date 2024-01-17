@@ -1,0 +1,13 @@
+@import "../../variables";
+
+.button {
+  font-size: 14px;
+  background-color: $gray-bg-color;
+  padding: 10px;
+  border: 1px solid rgba(224, 224, 224, 1);
+  cursor: pointer;
+  min-width: 100px;
+  &:active {
+    background-color: rgba(224, 224, 224, 1);
+  }
+}

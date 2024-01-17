@@ -24,11 +24,9 @@ function Main() {
   }, []);
 
   useEffect(() => {
-    console.log("fetch data");
     fetchData();
   }, [fetchData]);
 
-  console.log(dataTable);
   return(<section className="mainContent">
         <section className="listContainer">
           {

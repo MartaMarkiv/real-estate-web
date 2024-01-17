@@ -1,11 +1,22 @@
 .dialogWrapper {
-  text-align: left;
+  // text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  .massagesWrapper {
+    text-align: left;
+  }
   
   .image {
     width: 300px;
   }
-
+  
   .descr {
     font-weight: 600;
   }
+}
+
+.formWrapper {
+  display: flex;
 }
