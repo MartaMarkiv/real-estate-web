@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.loginPage {
+  background-color: $gray-bg-color;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loginFormWrapper {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    min-width: 500px;
+
+    .loginHeader {
+      font-size: 32px;
+      align-self: center;
+    }
+
+    input {
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      align-self: center;
+      font-family: "CormorantInfantBold";
+      font-size: 20px;
+    }
+  }
+}
