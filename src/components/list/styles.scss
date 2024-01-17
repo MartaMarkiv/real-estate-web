@@ -1,7 +1,8 @@
 @import "../../variables";
 
-.container {
-  display: flex;
+.listContainer {
+  // display: flex;
+  max-width: 400px;
 
   .item {
     display: flex;
@@ -10,7 +11,7 @@
     border: 1px solid rgba(224, 224, 224, 1);
     padding: 15px;
     cursor: pointer;
-    min-width: 400px;
+    max-width: 100%;
 
     &.selected {
       background-color: $gray-bg-color;
@@ -48,29 +49,6 @@
         text-overflow: ellipsis;
         text-wrap: nowrap;
         text-align: left;
-      }
-    }
-  }
-
-  .subContainer {
-    border: 1px solid rgba(224, 224, 224, 1);
-    width: 100%;
-    padding: 15px;
-
-    .noArticle {
-      font-size: 24px;
-      color: rgb(167, 164, 164);
-      text-align: left;
-    }
-
-    .articleContainer {
-      text-align: left;
-      .image {
-        width: 300px;
-      }
-
-      .descr {
-        font-weight: 600;
       }
     }
   }

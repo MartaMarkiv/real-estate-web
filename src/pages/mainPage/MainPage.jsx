@@ -3,12 +3,13 @@ import { v4 as uuidv4 } from "uuid";
 import api from "../../api";
 import "./styles.scss";
 import ListComponent from "../../components/list/ListComponent";
+import DialogComponent from "../../components/dialog/DialogComponent";
 
 function Main() {
   const [dataTable, setDataTable] = useState([]);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const fetchData = useCallback(async () => {
-    console.log("inside");
     await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
       .then(resp => {
         const data = resp.data["articles"].map(item => {
@@ -27,8 +28,15 @@ function Main() {
     fetchData();
   }, [fetchData]);
 
-  return(<section className="content">
-      <ListComponent data={dataTable} />
+  return(<section className="mainContent">
+        <ListComponent data={dataTable} selectedItem={selectedItem} changeItem={setSelectedItem} />
+        <section className="dialogContainer">
+        {
+          selectedItem ? 
+          <DialogComponent data={selectedItem} />:
+          <div className="noArticle">Choose article to display details.</div>
+        }
+      </section>
     </section>
   );
 }

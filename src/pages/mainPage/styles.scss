@@ -6,28 +6,10 @@
   margin: 20px 0;
 }
 
-.tableOperationWrapper {
+.mainContent {
   display: flex;
-  justify-content: space-between;
-
-  .searchFilter {
-    display: flex;
-  }
-
-  .filterButton {
-    background-color: $gray-bg-color;
-    color: $text-color;
-    font-size: 12px;
-    text-transform: capitalize;
-    margin-left: 20px;
-
-    &:hover {
-      background-color: $gray-bg-color;
-    }
-  }
 }
 
-.filtersWrapper {
-  display: flex;
-  margin-bottom: 20px;
+.dialogContainer {
+  padding: 20px;
 }

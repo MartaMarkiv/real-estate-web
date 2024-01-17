@@ -19,7 +19,8 @@
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
-        "quotes": ["error", "double", { "allowTemplateLiterals": true }]
+        "quotes": ["error", "double", { "allowTemplateLiterals": true }],
+        "react/prop-types": "off"
     },
     "overrides": [
         {
