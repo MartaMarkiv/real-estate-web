@@ -2,8 +2,8 @@ import { useState, useEffect, useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
 import api from "../../api";
 import "./styles.scss";
-import ListComponent from "../../components/list/ListComponent";
 import DialogComponent from "../../components/dialog/DialogComponent";
+import DialogItem from "../../components/dialogItem/DialogItem";
 
 function Main() {
   const [dataTable, setDataTable] = useState([]);
@@ -28,8 +28,20 @@ function Main() {
     fetchData();
   }, [fetchData]);
 
+  console.log(dataTable);
   return(<section className="mainContent">
-        <ListComponent data={dataTable} selectedItem={selectedItem} changeItem={setSelectedItem} />
+        <section className="listContainer">
+          {
+            dataTable?.map((item) => {
+              return <DialogItem
+                key={item.index}
+                item={item}
+                changeSelected={setSelectedItem}
+                selectedItem={selectedItem}
+              />
+            })
+          }
+        </section>
         <section className="dialogContainer">
         {
           selectedItem ? 

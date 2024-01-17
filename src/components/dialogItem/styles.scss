@@ -1,0 +1,50 @@
+@import "../../variables";
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border: 1px solid rgba(224, 224, 224, 1);
+  padding: 15px;
+  cursor: pointer;
+  max-width: 100%;
+
+  &.selected {
+    background-color: $gray-bg-color;
+  }
+
+  &:hover {
+    background-color: $gray-bg-color;
+  }
+
+  .image {
+    width: 150px;
+
+    img, span {
+      max-width: 100%;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    .name {
+      font-weight: 600;
+      text-align: left;
+    }
+
+    div {
+      max-width: 200px;
+      text-align: left;
+    }
+
+    .titleArticle {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-wrap: nowrap;
+      text-align: left;
+    }
+  }
+}
