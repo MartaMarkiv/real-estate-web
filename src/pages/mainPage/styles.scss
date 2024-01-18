@@ -1,18 +1,22 @@
 @import "../../variables";
 
-.title {
-  font-size: 24px;
-  text-align: left;
-  margin: 20px 0;
-}
-
 .mainContent {
   display: flex;
+  height: calc(100% - 80px);
   .listContainer {
     max-width: 400px;
+    min-width: 400px;
+    height: 100%;
+    overflow-y: scroll;
+    box-sizing: border-box;
   }
 }
 
 .dialogContainer {
   padding: 20px;
+  width: 100%;
+
+  .noArticle {
+    font-size: 24px;
+  }
 }

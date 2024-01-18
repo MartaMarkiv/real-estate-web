@@ -1,9 +1,10 @@
 .dialogWrapper {
-  // text-align: left;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
+
   .massagesWrapper {
     text-align: left;
   }
@@ -19,4 +20,5 @@
 
 .formWrapper {
   display: flex;
+  width: 100%;
 }

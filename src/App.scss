@@ -1,13 +1,37 @@
 @import "./variables";
 
-header {
-  font-family: "CormorantInfantBold";
-  background-color: $main-color;
-  font-size: 32px;
-  color: white;
-  text-align: left;
-  padding: 20px;
-  text-align: center;
+.content {
+  height: 100vh;
+
+  header {
+    font-family: "CormorantInfantBold";
+    background-color: $main-color;
+    font-size: 32px;
+    height: 80px;
+    color: white;
+    text-align: left;
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $border-color; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $text-grey-color; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $text-color; 
+}
 
