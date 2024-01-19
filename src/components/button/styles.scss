@@ -1,15 +1,32 @@
 @import "../../variables";
 
-.button {
+.button.ant-btn-primary {
   font-family: "CormorantInfant";
   font-size: 18px;
-  background-color: $main-color;
+  background: $main-color;
   color: white;
-  padding: 10px;
+  padding: 5px 10px;
   border: 1px solid $border-color;
   cursor: pointer;
   min-width: 100px;
+
+  &:hover {
+    background-color: $active-color !important;
+  }
+
   &:active {
-    background-color: #86B6F6;
+    background-color: $main-color !important;
+  }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+    &:hover {
+      background-color: $main-color !important;
+    }
+  }
+
+  &.ant-btn {
+    height: auto;
   }
 }

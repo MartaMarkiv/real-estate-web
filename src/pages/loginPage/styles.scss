@@ -20,12 +20,27 @@
     .loginHeader {
       font-size: 32px;
       align-self: center;
+      margin-bottom: 20px;
+    }
+
+    .ant-form-item {
+      width: 100%;
+      .ant-form-item-label {
+        padding-bottom: 5px;
+      }
+
+      .ant-input-affix-wrapper {
+        padding: 0;
+        padding-right: 10px;
+      }
+
+      .ant-input-outlined {
+        border-color: $border-color;
+      }
     }
 
     input {
-      margin-top: 5px;
-      margin-bottom: 20px;
-      padding: 11px 15px;
+      padding: 10px 15px;
     }
 
     .button {

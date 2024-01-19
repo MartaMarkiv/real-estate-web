@@ -10,8 +10,11 @@ function Main() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const fetchData = useCallback(async () => {
-    await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
+    //await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
+    // await api.get(`login`)
+    await api.post(`login`, {emiil:"volodymyr.solchanyk@gmail.com", password:"admin12345"})
       .then(resp => {
+        console.log(resp);
         const data = resp.data["articles"].map(item => {
           const { urlToImage: imageUrl, title, author, description, publishedAt, url } = item;
           const index = uuidv4();
@@ -20,7 +23,9 @@ function Main() {
         setDataTable(data);
       })
       // eslint-disable-next-line no-unused-vars
-      .catch(err => {});
+      .catch(err => {
+        console.log(err);
+      });
   }, []);
 
   useEffect(() => {

@@ -1,13 +1,16 @@
 import "./styles.scss";
+import { Button } from "antd";
 
-function ButtonComponent({text, sendAction, typeButton = "button"}) {
-  return <button
+function ButtonComponent({text, sendAction, typeButton = "button", disabled = false}) {
+  return <Button
     className="button"
-    onClick={sendAction}
-    type={typeButton}
+    type="primary"
+    htmlType={typeButton}
+    onClick={()=>sendAction}
+    disabled={disabled}
   >
     {text}
-  </button>
+  </Button>
 }
 
 export default ButtonComponent;
