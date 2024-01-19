@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
-import api from "../../api";
+import api from "../../api/api";
 import "./styles.scss";
 import DialogComponent from "../../components/dialog/DialogComponent";
 import DialogItem from "../../components/dialogItem/DialogItem";
@@ -10,9 +10,9 @@ function Main() {
   const [selectedItem, setSelectedItem] = useState(null);
 
   const fetchData = useCallback(async () => {
-    //await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
+    await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
     // await api.get(`login`)
-    await api.post(`login`, {emiil:"volodymyr.solchanyk@gmail.com", password:"admin12345"})
+    // await api.post(`login`, {emiil:"volodymyr.solchanyk@gmail.com", password:"admin12345"})
       .then(resp => {
         console.log(resp);
         const data = resp.data["articles"].map(item => {

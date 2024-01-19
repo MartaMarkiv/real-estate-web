@@ -15,9 +15,11 @@
     align-items: flex-start;
     justify-content: center;
     padding: 20px;
+    position: relative;
     min-width: 500px;
 
     .loginHeader {
+      font-family: "CormorantInfant";
       font-size: 32px;
       align-self: center;
       margin-bottom: 20px;
@@ -48,6 +50,14 @@
       font-family: "CormorantInfantBold";
       font-size: 20px;
       width: 100%;
+    }
+
+    .error {
+      position: absolute;
+      bottom: 10px;
+      color: red;
+      right: 50%;
+      transform: translateX(50%);
     }
   }
 }

@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./styles.scss";
 import SubmitButton from "../../components/submitButton/SubmitButton";
 import { Form, Input } from "antd";
+import { loginRequest } from "../../api/requests";
+import Cookies from "universal-cookie";
+const cookies = new Cookies();
 
 function LoginPage() {
+  const navigate = useNavigate();
+
+  const token = cookies.get("userEstateToken");
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [userToken, setUserToken] = useState(token);
+
+  useEffect(() => {
+    if (userToken) {
+      navigate("/"); 
+    }
+  }, [userToken]);
 
   const submitForm = (e) => {
     e.preventDefault();
@@ -15,15 +29,18 @@ function LoginPage() {
     console.log(email);
     console.log(password);
     // eslint-disable-next-line no-unused-vars
-    const promiseA = new Promise((resolve, reject) => {
-      
-      setTimeout(()=> {
-        console.log("Success");
-        resolve(777);
-      }, 3000);
-    });
-    
-    promiseA.then((val) => console.log("asynchronous logging has val:", val));
+    loginRequest(email, password, data => {
+      console.log("login req ", data);
+      if (data.success) {
+        console.log("data success");
+        cookies.set("userEstateToken", data.token, { path: "/" });
+        setUserToken(data.token);
+
+      } else {
+        setErrorMessage(data.message || data.error);
+          setTimeout(() => setErrorMessage(null), 3000);
+      }
+  });
   }
 
   const changeEmail = (e) => {
@@ -34,14 +51,6 @@ function LoginPage() {
     setPassword(e.target.value);
   }
 
-  const onFinish = (values) => {
-    console.log("Success:", values);
-  };
-  
-  const onFinishFailed = (errorInfo) => {
-    console.log("Failed:", errorInfo);
-  };
-
   const [form] = Form.useForm();
 
   return(<section className="loginPage">
@@ -50,8 +59,6 @@ function LoginPage() {
       name="basic"
       layout="vertical"
       form={form}
-      onFinish={onFinish}
-      onFinishFailed={onFinishFailed}
       onSubmitCapture={submitForm}
       autoComplete="off"
     >
@@ -81,6 +88,7 @@ function LoginPage() {
       >
         <Input.Password onChange={changePassword}/>
       </Form.Item>
+      {errorMessage && <div className="error">{errorMessage}</div>}
 
       <Form.Item>
         <SubmitButton form={form}/>
