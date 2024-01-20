@@ -9,6 +9,7 @@
   border: 1px solid $border-color;
   cursor: pointer;
   min-width: 100px;
+  border-radius: 0;
 
   &:hover {
     background-color: $active-color !important;

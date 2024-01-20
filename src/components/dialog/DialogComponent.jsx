@@ -15,13 +15,14 @@ function DialogComponent({data}) {
     console.log("send message: ", message);
   }
 
+
   return (
     <section className="dialogWrapper">
       <div className="massagesWrapper">
       { data.imageUrl && <div>
         <img className="image" src={data.imageUrl} alt="Image"/></div>}
         <div><span className="descr">Author:</span> <span>{data.author}</span></div>
-        <div><span className="descr">Title:</span> <span>{data.title}</span></div>
+        <div className="adminMessage"><span className="descr">Title:</span> <span>{data.title}</span></div>
         <div><a href={data.url}>Click to open article</a></div>
       </div>
       <div className="formWrapper">
@@ -31,7 +32,7 @@ function DialogComponent({data}) {
           changeValue={changeMessage}
           textValue={message}
         />
-        <ButtonComponent text="Send" sendAction={sendMessage}/>
+        <ButtonComponent text="Send" sendAction={sendMessage} disabled={!message}/>
       </div>
     </section>
     )

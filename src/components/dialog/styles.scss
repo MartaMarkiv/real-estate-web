@@ -7,6 +7,11 @@
 
   .massagesWrapper {
     text-align: left;
+    width: 100%;
+    
+    .adminMessage {
+      text-align: right;
+    }
   }
   
   .image {
