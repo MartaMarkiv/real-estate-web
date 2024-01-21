@@ -5,6 +5,9 @@ import ButtonComponent from "../button/ButtonComponent";
 
 function DialogComponent({data}) {
 
+  console.log("SELECTED");
+  console.log(data);
+
   const [message, setMessage] = useState("");
 
   const changeMessage = (e) => {
@@ -19,11 +22,17 @@ function DialogComponent({data}) {
   return (
     <section className="dialogWrapper">
       <div className="massagesWrapper">
-      { data.imageUrl && <div>
-        <img className="image" src={data.imageUrl} alt="Image"/></div>}
-        <div><span className="descr">Author:</span> <span>{data.author}</span></div>
-        <div className="adminMessage"><span className="descr">Title:</span> <span>{data.title}</span></div>
-        <div><a href={data.url}>Click to open article</a></div>
+        {
+          data.messages.map(item => {
+            return(<div
+              className={"message " + (item.response_email ? "adminMessage" : "")}
+              key={item.id}
+            >
+              {/* {item.response_email && <span>admin: </span>} */}
+              {item.action}
+            </div>)
+          })
+        }
       </div>
       <div className="formWrapper">
         <InputComponent

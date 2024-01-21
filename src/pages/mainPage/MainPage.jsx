@@ -1,5 +1,4 @@
 import { useState, useEffect, useCallback } from "react";
-import { v4 as uuidv4 } from "uuid";
 import { w3cwebsocket as WebSocket } from "websocket";
 import { useNavigate } from "react-router-dom";
 import api from "../../api/api";
@@ -9,6 +8,7 @@ import DialogItem from "../../components/dialogItem/DialogItem";
 import { parser } from "../../utils/parser";
 import Cookies from "universal-cookie";
 import { Flex, Spin } from "antd";
+import mockedData from "../../mockedData.json";
 
 const cookies = new Cookies();
 
@@ -21,6 +21,7 @@ function Main({userToken}) {
   const [loadingDialogs, setLoadingDialogs] = useState(true);
   // eslint-disable-next-line no-unused-vars
   const [messagesData, setMessagesData] = useState([]);
+  // eslint-disable-next-line no-unused-vars
   const [errorConnection, setErrorConnection] = useState(false);
 
   const navigate = useNavigate();
@@ -32,12 +33,8 @@ function Main({userToken}) {
     await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
       .then(resp => {
         console.log(resp);
-        const data = resp.data["articles"].map(item => {
-          const { urlToImage: imageUrl, title, author, description, publishedAt, url } = item;
-          const index = uuidv4();
-          return { imageUrl, title, author, description, publishedAt, url, index };
-        });
-        setDataTable(data);
+        const {dialogs: data} = mockedData;
+        setDataTable(parser(data));
       })
       // eslint-disable-next-line no-unused-vars
       .catch(err => {
@@ -75,7 +72,7 @@ function Main({userToken}) {
     };
 
     client.onerror = () => {
-      console.log("Socket connection error");
+      // console.log("Socket connection error");
       setErrorConnection(true);
       setLoadingDialogs(false);
     };
@@ -90,17 +87,17 @@ function Main({userToken}) {
   </Flex> :
   <>
   {
-    errorConnection ? <div
-      className="errorConnection"
-    >
-      Socket error connection. Please, try again later.
-    </div> :
+    // errorConnection ? <div
+    //   className="errorConnection"
+    // >
+    //   Socket error connection. Please, try again later.
+    // </div> :
       <section className="mainContent">
         <section className="listContainer">
           {
             dataTable?.map((item) => {
               return <DialogItem
-                key={item.index}
+                key={item.userId}
                 item={item}
                 changeSelected={setSelectedItem}
                 selectedItem={selectedItem}
@@ -112,7 +109,7 @@ function Main({userToken}) {
         {
           selectedItem ? 
           <DialogComponent data={selectedItem} />:
-          <div className="noArticle">Choose article to display details.</div>
+          <div className="noArticle">Choose dialog to display details.</div>
         }
       </section>
     </section>

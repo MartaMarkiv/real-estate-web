@@ -62,7 +62,7 @@ function LoginPage() {
       onSubmitCapture={submitForm}
       autoComplete="off"
     >
-      <div className="loginHeader">Login to Emirate real estate</div>
+      <div className="loginHeader">Dubai Real Estate</div>
       <Form.Item
         label="Email"
         name="email"

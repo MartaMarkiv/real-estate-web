@@ -5,7 +5,7 @@ export const loginRequest = (email, password, callback) => {
   callback(resp);
   // api.post(`/login`, { email, password })
   // .then(res => {
-  //     callback(res.data);
+  //     callback(res);
   // }).catch(err => {
   //     callback({success: false, error: err.message || err});
   // })

@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .dialogWrapper {
   display: flex;
   justify-content: space-between;
@@ -9,17 +11,18 @@
     text-align: left;
     width: 100%;
     
-    .adminMessage {
-      text-align: right;
+    .message {
+      margin-bottom: 10px;
+      padding: 7px;
+      border: 1px solid $border-color;
+      border-radius: 7px;
     }
-  }
-  
-  .image {
-    width: 300px;
-  }
-  
-  .descr {
-    font-weight: 600;
+
+    .adminMessage {
+      // text-align: right;
+      background-color: $secondary-color;
+      font-weight: 600;
+    }
   }
 }
 

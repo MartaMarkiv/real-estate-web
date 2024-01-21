@@ -1,8 +1,10 @@
 import "./styles.scss";
+import NotificationComponent from "../notification/NotificationComponent";
 
 function DialogItem({changeSelected, item, selectedItem}) {
-  return(<div key={`${item.index}`} onClick={()=>changeSelected(item)}
-    className={"item " + (selectedItem && selectedItem.index === item.index ? "selected" : "")}>
+  console.log("item.hasNotification: ", item.hasNotification, "  ", !!item.hasNotification);
+  return(<div onClick={()=>changeSelected(item)}
+    className={"item " + (selectedItem && selectedItem.userId === item.userId ? "selected" : "")}>
       <div className="image">
         {
           item.imageUrl ?
@@ -11,8 +13,9 @@ function DialogItem({changeSelected, item, selectedItem}) {
         }
       </div>
       <div className="details">
-        <div className="name">{item.author || "Unknown author"}</div>
+        <div className="name">{item.userId}</div>
         <div className="titleArticle">{item.title}</div>
+        {!!item.hasNotification && <NotificationComponent count={item.hasNotification} />}
       </div>
     </div>);
 }

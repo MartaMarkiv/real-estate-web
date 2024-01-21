@@ -8,6 +8,7 @@
   padding: 15px;
   cursor: pointer;
   max-width: 100%;
+  position: relative;
 
   &.selected {
     background-color: $secondary-color;
