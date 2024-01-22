@@ -19,3 +19,8 @@ code {
   font-family: "CormorantInfant", source-code-pro, Menlo, Monaco, Consolas,
     monospace;
 }
+
+html {
+  overflow: hidden;
+  box-sizing: border-box;
+}

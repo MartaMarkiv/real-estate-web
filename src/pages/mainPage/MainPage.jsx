@@ -82,6 +82,7 @@ function Main({userToken}) {
     connectSocket();
   }, []);
 
+
   return( loadingDialogs ? <Flex align="center" justify="center">
     <Spin size="large" fullscreen={true} tip="Loading"/>
   </Flex> :

@@ -6,9 +6,6 @@ import Avatar from "antd/es/avatar/avatar";
 
 function DialogComponent({data}) {
 
-  console.log("SELECTED");
-  console.log(data);
-
   const [message, setMessage] = useState("");
 
   const changeMessage = (e) => {
@@ -28,7 +25,6 @@ function DialogComponent({data}) {
               className={"message " + (item.response_email ? "adminMessage" : "")}
               key={item.id}
             >
-              {/* {item.response_email && <span>admin: </span>} */}
               <Avatar>{item.name_surname[0]}</Avatar>
               <span className="messageText">{item.action}</span>
             </div>)

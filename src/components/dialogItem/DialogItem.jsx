@@ -11,6 +11,7 @@ function DialogItem({changeSelected, item, selectedItem}) {
       </Space>
       <div className="details">
         <div className="name">{item.userName}</div>
+        <span className="time">{item.date}</span>
       </div>
     </div>);
 }

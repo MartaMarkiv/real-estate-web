@@ -18,12 +18,9 @@
     background-color: $secondary-color;
   }
 
-  
-
-    .ant-avatar {
-      background-color: $active-color;
-    }
-  
+  .ant-avatar {
+    background-color: $user-color;
+  }
 
   .details {
     display: flex;
@@ -35,9 +32,8 @@
       text-align: left;
     }
 
-    div {
-      max-width: 200px;
-      text-align: left;
+    .time {
+      font-size: 14px;
     }
   }
 }
