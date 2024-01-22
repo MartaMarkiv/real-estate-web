@@ -5,7 +5,7 @@
   height: calc(100% - 80px);
   .listContainer {
     max-width: 400px;
-    min-width: 400px;
+    min-width: 310px;
     height: 100%;
     overflow-y: scroll;
     box-sizing: border-box;
@@ -18,10 +18,10 @@
 }
 
 .dialogContainer {
-  padding: 20px;
   width: 100%;
 
   .noArticle {
     font-size: 24px;
+    padding: 20px;
   }
 }

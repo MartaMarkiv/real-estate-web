@@ -18,13 +18,12 @@
     background-color: $secondary-color;
   }
 
-  .image {
-    width: 150px;
+  
 
-    img, span {
-      max-width: 100%;
+    .ant-avatar {
+      background-color: $active-color;
     }
-  }
+  
 
   .details {
     display: flex;
@@ -38,13 +37,6 @@
 
     div {
       max-width: 200px;
-      text-align: left;
-    }
-
-    .titleArticle {
-      overflow: hidden;
-      text-overflow: ellipsis;
-      text-wrap: nowrap;
       text-align: left;
     }
   }

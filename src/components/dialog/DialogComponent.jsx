@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./styles.scss";
 import InputComponent from "../input/InputComponent";
 import ButtonComponent from "../button/ButtonComponent";
+import Avatar from "antd/es/avatar/avatar";
 
 function DialogComponent({data}) {
 
@@ -17,8 +18,7 @@ function DialogComponent({data}) {
   const sendMessage = () => {
     console.log("send message: ", message);
   }
-
-
+  
   return (
     <section className="dialogWrapper">
       <div className="massagesWrapper">
@@ -29,7 +29,8 @@ function DialogComponent({data}) {
               key={item.id}
             >
               {/* {item.response_email && <span>admin: </span>} */}
-              {item.action}
+              <Avatar>{item.name_surname[0]}</Avatar>
+              <span className="messageText">{item.action}</span>
             </div>)
           })
         }
