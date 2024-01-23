@@ -1,0 +1,355 @@
+{
+  "dialogs" : [
+    {
+      "id" : "7",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "1",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 14:39:48",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "2",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Return home",
+      "create_date": "2024-01-14 15:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "3",
+      "lang": "Різдво",
+      "telegram_id": "5835321",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Oksana"
+    },
+    {
+      "id" : "4",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 16:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "5",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-01 14:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "6",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Call to me: 8934839893",
+      "create_date": "2024-01-17 14:38:18",
+      "is_alert": 1,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "8",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Підібрати",
+      "create_date": "2024-01-18 14:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "9",
+      "lang": "Різдво",
+      "telegram_id": "5839567",
+      "response_email": null,
+      "action": "Готові обєкти",
+      "is_alert": null,
+      "create_date": "2024-01-16 11:32:18",
+      "name_surname": "Marta M"
+    },
+    {
+      "id" : "10",
+      "lang": "Різдво",
+      "telegram_id": "5831675",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 11:32:18",
+      "is_alert": null,
+      "name_surname": "Ostap H"
+    },
+    {
+      "id" : "11",
+      "lang": "Різдво",
+      "telegram_id": "5836128",
+      "response_email": null,
+      "action": "Нерухомість для інвестицій",
+      "create_date": "2024-01-14 11:34:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr Tr."
+    },
+    {
+      "id" : "12",
+      "lang": "Різдво",
+      "telegram_id": "5833712",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 10:31:18",
+      "is_alert": null,
+      "name_surname": "Sasha"
+    },
+    {
+      "id" : "13",
+      "lang": "Різдво",
+      "telegram_id": "5832674",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 10:30:18",
+      "is_alert": null,
+      "name_surname": "Kate M"
+    },
+    {
+      "id" : "14",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Нерухомість для інвестицій",
+      "create_date": "2024-01-02 12:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "15",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Return home",
+      "create_date": "2024-01-03 10:30:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "16",
+      "lang": "Різдво",
+      "telegram_id": "5817561",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 13:38:18",
+      "is_alert": null,
+      "name_surname": "Степанія Ф."
+    },
+    {
+      "id" : "35",
+      "lang": "Різдво",
+      "telegram_id": "1152374",
+      "response_email": null,
+      "action": "Нерухомість для інвестицій",
+      "create_date": "2024-01-15 19:38:18",
+      "is_alert": 1,
+      "name_surname": "Anton T."
+    },
+    {
+      "id" : "36",
+      "lang": "Різдво",
+      "telegram_id": "1152374",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-13 11:18:18",
+      "is_alert": null,
+      "name_surname": "Anton T."
+    },
+    {
+      "id" : "361",
+      "lang": "Різдво",
+      "telegram_id": "1152374",
+      "response_email": null,
+      "action": "Call to me: 8934839893",
+      "create_date": "2024-01-14 14:18:18",
+      "is_alert": 1,
+      "name_surname": "Anton T."
+    },
+    {
+      "id" : "37",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Нерухомість для інвестицій",
+      "create_date": "2024-01-04 16:28:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "38",
+      "lang": "UA",
+      "telegram_id": "5837912",
+      "response_email": "adminEmail@gmail.com",
+      "action": "Підібрати",
+      "create_date": "2024-01-05 14:38:18",
+      "is_alert": null,
+      "name_surname": "Admin name"
+    },
+    {
+      "id" : "39",
+      "lang": "Різдво",
+      "telegram_id": "5847120",
+      "response_email": null,
+      "action": "Return home",
+      "create_date": "2024-01-14 10:38:18",
+      "is_alert": null,
+      "name_surname": "Tamara"
+    },
+    {
+      "id" : "40",
+      "lang": "UA",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Return home",
+      "create_date": "2024-01-06 11:38:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "41",
+      "lang": "UA",
+      "telegram_id": "5847120",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Tamara"
+    },
+    {
+      "id" : "42",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Нерухомість для життя",
+      "create_date": "2024-01-10 14:18:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "43",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "200000 - 400000",
+      "create_date": "2024-01-14 14:12:18",
+      "is_alert": 1,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "44",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": "testEmail@gmail.com",
+      "action": "Підкажіть, який обʼєкт ви вираєте?",
+      "create_date": "2024-01-14 10:28:18",
+      "is_alert": null,
+      "name_surname": "Admin Name"
+    },
+    {
+      "id" : "45",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "Етап будівництва",
+      "create_date": "2024-01-21 10:48:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "46",
+      "lang": "Різдво",
+      "telegram_id": "5837912",
+      "response_email": null,
+      "action": "до 200000",
+      "create_date": "2024-01-22 11:28:18",
+      "is_alert": null,
+      "name_surname": "Volodymyr S"
+    },
+    {
+      "id" : "47",
+      "lang": "Різдво",
+      "telegram_id": "5839897",
+      "response_email": null,
+      "action": "Готові обєкти",
+      "is_alert": null,
+      "create_date": "2024-01-22 11:28:18",
+      "name_surname": "Artem M"
+    },
+    {
+      "id" : "48",
+      "lang": "Різдво",
+      "telegram_id": "5839875",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Oleg H"
+    },
+    {
+      "id" : "49",
+      "lang": "Різдво",
+      "telegram_id": "5786128",
+      "response_email": null,
+      "action": "Нерухомість для інвестицій",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Vlad Tr."
+    },
+    {
+      "id" : "50",
+      "lang": "Різдво",
+      "telegram_id": "1239567",
+      "response_email": null,
+      "action": "Готові обєкти",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Maria M"
+    },
+    {
+      "id" : "51",
+      "lang": "Різдво",
+      "telegram_id": "8931675",
+      "response_email": null,
+      "action": "Welcome, existing user",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Nick H"
+    },
+    {
+      "id" : "52",
+      "lang": "Різдво",
+      "telegram_id": "9076128",
+      "response_email": null,
+      "action": "Нерухомість для інвестицій",
+      "create_date": "2024-01-14 14:38:18",
+      "is_alert": null,
+      "name_surname": "Roman Tr."
+    }
+  ]
+    
+}
