@@ -1,21 +1,23 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { w3cwebsocket as WebSocket } from "websocket";
 import { useNavigate } from "react-router-dom";
-import api from "../../api/api";
+// import api from "../../api/api";
 import "./styles.scss";
 import DialogComponent from "../../components/dialog/DialogComponent";
 import DialogItem from "../../components/dialogItem/DialogItem";
 import { parser } from "../../utils/parser";
 import Cookies from "universal-cookie";
 import { Flex, Spin } from "antd";
+// eslint-disable-next-line no-unused-vars
 import mockedData from "../../mockedData.json";
 
 const cookies = new Cookies();
 
-const socketConn = "wss://client_history";
+const socketConn = "ws://@185.107.237.254:8000/ws/client_history";
 
+function Main() {
+  const userToken = cookies.get("userEstateToken");
 
-function Main({userToken}) {
   const [dataTable, setDataTable] = useState([]);
   const [selectedItem, setSelectedItem] = useState(null);
   const [loadingDialogs, setLoadingDialogs] = useState(true);
@@ -23,34 +25,18 @@ function Main({userToken}) {
   const [messagesData, setMessagesData] = useState([]);
   // eslint-disable-next-line no-unused-vars
   const [errorConnection, setErrorConnection] = useState(false);
+  const [visible, setVisible] = useState(true);
 
   const navigate = useNavigate();
 
   const client = new WebSocket(`${socketConn}?token=${userToken}`);
-
-
-  const fetchData = useCallback(async () => {
-    await api.get(`top-headlines?country=us&apiKey=9abaa2f7310f448db3fdb531a85093cc`)
-      .then(resp => {
-        console.log(resp);
-        const {dialogs: data} = mockedData;
-        setDataTable(parser(data));
-      })
-      // eslint-disable-next-line no-unused-vars
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
-
-  useEffect(() => {
-    fetchData();
-  }, [fetchData]);
-
   const connectSocket = () => {
 
     client.onmessage = (event) => {
-      console.log("on message");
       setLoadingDialogs(false);
+
+      console.log("ON MESSAGE");
+      console.log(event.data);
       
       const json = JSON.parse(event.data);
       if (!json.success && json.message && userToken) {
@@ -64,15 +50,12 @@ function Main({userToken}) {
         }
       }
       
-      const allOMessages = json.length ? json.map(item => item.games).flat() : [];
-
-      const parsedData = parser(allOMessages);
-
-      setMessagesData(parsedData);
+      const parsedData = parser(json);
+      setDataTable(parsedData);
     };
 
     client.onerror = () => {
-      // console.log("Socket connection error");
+      console.log("Socket connection error");
       setErrorConnection(true);
       setLoadingDialogs(false);
     };
@@ -81,6 +64,17 @@ function Main({userToken}) {
   useEffect(() => {
     connectSocket();
   }, []);
+
+
+  // useEffect(() => {
+  //   const {dialogs: data} = mockedData;
+  //   setDataTable(parser(data));
+  // }, []);
+
+  const selectDialog = (value) => {
+    setVisible(false);
+    setSelectedItem(value);
+  }
 
 
   return( loadingDialogs ? <Flex align="center" justify="center">
@@ -93,14 +87,14 @@ function Main({userToken}) {
     // >
     //   Socket error connection. Please, try again later.
     // </div> :
-      <section className="mainContent">
+      <section className={"mainContent " + (visible ? "visible" : "")}>
         <section className="listContainer">
           {
             dataTable?.map((item) => {
               return <DialogItem
                 key={item.userId}
                 item={item}
-                changeSelected={setSelectedItem}
+                changeSelected={selectDialog}
                 selectedItem={selectedItem}
               />
             })
@@ -109,7 +103,11 @@ function Main({userToken}) {
         <section className="dialogContainer">
         {
           selectedItem ? 
-          <DialogComponent data={selectedItem} />:
+          <DialogComponent
+            data={selectedItem}
+            user={selectedItem && selectedItem.userName}
+            closeDialog={setVisible}
+          />:
           <div className="noArticle">Choose dialog to display details.</div>
         }
       </section>

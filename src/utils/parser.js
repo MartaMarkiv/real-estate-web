@@ -3,6 +3,7 @@ import { transformData } from "./transformData";
 import { parseDate } from "./parseDate";
 
 export const parser = data => {
+  console.log(data);
   const list = data.map(item => Object.assign(item, parseDate(item.create_date)));
   const ids = list.map(item => item.telegram_id);
   const uniqueIds = Array.from(new Set(ids));

@@ -11,6 +11,28 @@
   padding-bottom: 80px;
   box-sizing: border-box;
 
+  .header {
+    background-color: $secondary-color;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    .anticon {
+      cursor: pointer;
+    }
+
+    .name {
+      font-size: 20px;
+      margin-left: 15px;
+    }
+  }
+
   .massagesWrapper {
     text-align: left;
     width: 100%;
@@ -31,6 +53,28 @@
 
       .messageText {
         margin-left: 10px;
+        position: relative;
+
+        .time {
+          font-weight: 400;
+          font-size: 14px;
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          transform: translateX(100%);
+        }
+      }
+    }
+
+    .date {
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: 10px;
+
+      span {
+        background-color: $date-bg-color;
+        border-radius: 14px;
+        padding: 2px 8px;
       }
     }
 
@@ -52,5 +96,15 @@
     bottom: 0;
     left: 0;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 780px) {
+  .dialogWrapper {
+    padding-top: 75px;
+
+    .header {
+      display: flex;
+    }
   }
 }

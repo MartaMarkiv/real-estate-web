@@ -61,3 +61,10 @@
     }
   }
 }
+
+@media (max-width: 520px) {
+  .loginPage .loginFormWrapper {
+    width: 100%;
+    min-width: auto;
+  }
+}
