@@ -34,7 +34,7 @@ function LoginPage() {
       if (data.success) {
         console.log("data success");
         cookies.set("userEstateToken", data.token, { path: "/" });
-        cookies.set("userEstateEmail", data.token, { path: "/" });
+        cookies.set("userEstateEmail", email, { path: "/" });
         setUserToken(data.token);
 
       } else {

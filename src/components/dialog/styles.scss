@@ -63,6 +63,12 @@
           bottom: -10px;
           transform: translateX(100%);
         }
+
+        .reference {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
       }
     }
 
@@ -96,6 +102,31 @@
     bottom: 0;
     left: 0;
     box-sizing: border-box;
+
+    .ant-form-item {
+      margin-bottom: 0;
+
+      &:first-child {
+        width: 100%;
+      }
+    }
+
+    .ant-form-item-label {
+      display: none;
+    }
+
+    .ant-form-item-control input {
+      font-family: "CormorantInfant";
+      font-size: 18px;
+      width: 100%;
+      border: 1px solid $border-color;
+      outline: none;
+      box-sizing: border-box;
+      border-radius: 0;
+      &:focus {
+        border: 1px solid $border-color;
+      }
+    }
   }
 }
 

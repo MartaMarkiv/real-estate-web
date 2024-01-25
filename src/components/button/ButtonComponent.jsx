@@ -6,7 +6,7 @@ function ButtonComponent({text, sendAction, typeButton = "button", disabled = fa
     className="button"
     type="primary"
     htmlType={typeButton}
-    onClick={()=>sendAction}
+    onClick={sendAction}
     disabled={disabled}
   >
     {text}
